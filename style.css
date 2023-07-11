@@ -199,6 +199,8 @@
   /* margin: 0px; */
 }
 .thought-content{
+  text-align: center;
+  font-size: 28px;
   position: relative; 
   object-position: center;
   left: 10%;
@@ -369,4 +371,33 @@
 .tech-card-image
 {
   width: 100%;
+}
+
+
+/* Newsletter Section */
+.newsletter-container{
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid black;
+  text-align:center;
+}
+.form-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Footer-section */
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+.back-to-top
+{
+  height: inherit;
+  width: inherit;
+  border: 1px solid black;
 }
