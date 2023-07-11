@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  .logo{
+    text-shadow: 2px 2px 4px #000000;
+    color:white;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  background-image: linear-gradient(to right, #9E768F , #9FA4C4);
+    color: #3D0E61;
+    height: 65px;
+    padding: 1em;
+    font-weight:bolder;
+    font-size:25px;
+  }
+  
+  .menu li:hover{
+    color:white;
+    cursor:pointer;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  /*Container for menu button  */
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  /*  Creating the menu button */
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 6px;
+    width: 32px;
+    border-radius: 3px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  /*  Adding Functionality to the Hamburger Menu with CSS  */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+    transition: 500ms;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+    transform: rotate(-45deg);
+    transition: 500ms;
+  }
+
+  /* Making the navbar responsive by CSS Media Queries */
+@media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #9f9a9a;
+      height: 2.5em;
+      padding: 0.5em;
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: black;
+      background-color: #E8E8E8;
+      
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+   
+    }
+  }
+  
+  
+  /* Carousel Window */
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.carousel-container  .carousel-card:not(:first-child){
+    display: none;
+}
+.carousel-card{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.carousel-card > img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+
+/* Latest News Window */
+.latest-news-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content:start;
+  overflow-x: scroll;
+}
+.latest-news-card{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Thought Section */
+.thought-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: fit-content;
+  flex-direction: column;
+}
+.heading-thought{
+
+  background-color: black;
+  color: white;
+  padding: 5px;
+  position: relative;
+  bottom: -40px;
+  left: 25%;
+  width: 50%;
+  z-index: 2;
+  /* margin: 0px; */
+}
+.thought-content{
+  position: relative; 
+  object-position: center;
+  left: 10%;
+  border: 20px solid orangered;
+  background-color: pink;
+  padding: 10px;
+  width: 80%;
+}
+
+
+/* Business Section */
+.business-main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.business-illustration{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.business-news-container,.business-illustration-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  margin: 10px;
+  border: 1px solid black;
+}
+.business-card{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  margin: 2px;
+}
+.business-card-image{
+  width: 100%;
+}
+
+/* Health Section */
+.health-main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.health-left-container{
+  width: 30%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.health-right-container
+{
+  width: 60%;
+  border: 1px solid black;
+}
+.health-illustration{
+  width:100%;
+  height: inherit;
+  }
+.health-card{
+  height: 50%;
+}
+.health-card-image
+{
+  width: 100%;
+}
+
+
+/* General News Section */
+.general-news-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.general-news-card{
+  width: 30%;
+  border: 1px solid black;
+}
+.general-card-image{
+  width: 100%;
+}
+
+
+/* Sports Section */
+.sports-main-container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.sports-left-container{
+  width: 30%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.sports-right-container
+{
+  width: 60%;
+  border: 1px solid black;
+}
+.sports-illustration{
+  width:100%;
+  height: inherit;
+  }
+.sports-card{
+  height: 50%;
+}
+.sports-card-image
+{
+  width: 100%;
+}
+
+
+/* Science Section */
+.science-news-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.science-news-card{
+  width: 30%;
+  border: 1px solid black;
+}
+.science-card-image{
+  width: 100%;
+}
+
+
+/* Entertainment Section */
+.entertainment-news-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.entertainment-news-card{
+  width: 30%;
+  border: 1px solid black;
+}
+.entertainment-card-image{
+  width: 100%;
+}
+
+/* tech Section */
+.tech-main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tech-left-container{
+  width: 30%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.tech-right-container
+{
+  width: 60%;
+  border: 1px solid black;
+}
+.tech-illustration{
+  width:100%;
+  height: inherit;
+  }
+.tech-card{
+  height: 50%;
+}
+.tech-card-image
+{
+  width: 100%;
+}
