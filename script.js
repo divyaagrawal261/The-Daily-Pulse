@@ -17,13 +17,15 @@ function search()
     newsContainer.innerHTML=""
     let url = "https://newsapi.org/v2/everything?q="+keyword+"&from="+year+"-"+(month-1)+"-"+day+"&sortBy=publishedAt&apiKey=ed8668a21719482a8d700d96b7a99f61";
     
-    fetch(url).then((response)=>response.json()).then((data)=>{
+    fetch(url).then((response)=>response.json()).then((data)=>
+    {
         console.log(data)
         let articles=data.articles
         let j=0;
         while(j!=articles.length)
-        {if(articles[j].urlToImage!=null)
         {
+            if(articles[j].urlToImage!=null)
+            {
             let newElement=document.createElement("div")
             newElement.className="news-card"
             newElement.url=articles[j].url
@@ -31,18 +33,12 @@ function search()
             container.appendChild(newElement)
             j++
             continue
+            }
+          j++
         }
-        j++
-    }
-})
+    })
 }
-// document.querySelectorAll(".news-card").addEventListener("onclick",open(this.url))
-// Object.addEventListener("onclick",open(this.url))
 
-// function open(URL)
-// {
-//     window.open(URL,`_parent`)
-// }
 
 
 

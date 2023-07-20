@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(news-1172463_1280.jpg);
+  background-image: url(images/news-1172463_1280.jpg);
   background-attachment: fixed;
   backdrop-filter: blur(10px);
   margin: 0;
@@ -473,7 +473,7 @@ h2 {
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-image: url(news-1172463_1280.jpg);
+  background-image: url(images/news-1172463_1280.jpg);
   background-attachment: fixed;
   justify-content: space-evenly;
 }

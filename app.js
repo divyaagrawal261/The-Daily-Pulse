@@ -8,7 +8,6 @@ refreshAPI("in")
 let slideNum=0;
 setInterval(()=>next(),5000);
 
-
 console.log(day,month,year)
 function next()
 {
@@ -68,11 +67,7 @@ let EntertainmentNewsHeadlines=document.getElementsByClassName("entertainment-ne
 let TechnologyNewsImage=document.getElementsByClassName("tech-card-image")
 let TechnologyNewsHeadlines=document.getElementsByClassName("technology-news-headline")
 
-
-
 document.getElementById("country").value=""
-
-
 
 function refreshAPI(country)
 {
@@ -123,6 +118,7 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {BusinessNewsImage[i].src=articles[j].urlToImage
             BusinessNewsHeadlines[i].innerText=articles[j].title
+            BusinessNewsImage[i].url=articles[j].url
 
             i++;
             j++;
@@ -142,6 +138,7 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {HealthNewsImage[i].src=articles[j].urlToImage
             HealthNewsHeadlines[i].innerText=articles[j].title
+            HealthNewsImage[i].url=articles[j].url
 
             i++;
             j++;
@@ -161,6 +158,8 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {GeneralNewsImage[i].src=articles[j].urlToImage
             GeneralNewsHeadlines[i].innerText=articles[j].title
+            GeneralNewsImage[i].url=articles[j].url
+
 
             i++;
             j++;
@@ -180,6 +179,7 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {SportsNewsImage[i].src=articles[j].urlToImage
             SportsNewsHeadlines[i].innerText=articles[j].title
+            SportsNewsImage[i].url=articles[j].url
 
             i++;
             j++;
@@ -200,6 +200,8 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {ScienceNewsImage[i].src=articles[j].urlToImage
             ScienceNewsHeadlines[i].innerText=articles[j].title
+            ScienceNewsImage[i].url=articles[j].url
+
 
             i++;
             j++;
@@ -220,6 +222,8 @@ fetch(url).then((response)=>response.json()).then((data)=>{
             if(articles[j].urlToImage!=null)
             {EntertainmentNewsImage[i].src=articles[j].urlToImage
             EntertainmentNewsHeadlines[i].innerText=articles[j].title
+            EntertainmentNewsImage[i].url=articles[j].url
+
 
             i++;
             j++;
@@ -239,6 +243,7 @@ fetch(url).then((response)=>response.json()).then((data)=>{
              if(articles[j].urlToImage!=null)
              {TechnologyNewsImage[i].src=articles[j].urlToImage
              TechnologyNewsHeadlines[i].innerText=articles[j].title
+             TechnologyNewsImage[i].url=articles[j].url
  
              i++;
              j++;

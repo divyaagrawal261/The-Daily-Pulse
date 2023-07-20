@@ -10,7 +10,7 @@
   <body>
     <!-- Header region -->
     <div class="header-container">
-      <img src="The Daily Pulse.png" alt="Logo" class="Logo-img" />
+      <img src="images/The Daily Pulse.png" alt="Logo" class="Logo-img" />
     </div>
 
     <!-- The Navigation Bar -->
@@ -25,7 +25,7 @@
       <!--  main menu    -->
       <ul class="menu">
         <li>Home</li>
-        <li>Topics</li>
+        <li onclick="window.open(`/topics.html`,`_parent`)">Topics</li>
         <li>About</li>
         <li>Contact</li>
       </ul>
@@ -38,7 +38,12 @@
           type="text"
           class="searchByKeyword"
           placeholder="Search using Keyword"
-        /><button class="goByKeyword" onclick="window.open(`/keyword.html`,`_parent`)">Search</button>
+        /><button
+          class="goByKeyword"
+          onclick="window.open(`/keyword.html`,`_parent`)"
+        >
+          Search
+        </button>
       </div>
 
       <div class="countryNames">
@@ -107,7 +112,7 @@
     <div class="carousel-container">
       <div class="carousel-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="carousel-card-image"
           onclick="window.open(this.url)"
@@ -116,7 +121,7 @@
       </div>
       <div class="carousel-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="carousel-card-image"
           onclick="window.open(this.url)"
@@ -125,7 +130,7 @@
       </div>
       <div class="carousel-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="carousel-card-image"
           onclick="window.open(this.url)"
@@ -134,7 +139,7 @@
       </div>
       <div class="carousel-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="carousel-card-image"
           onclick="window.open(this.url)"
@@ -143,7 +148,7 @@
       </div>
       <div class="carousel-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="carousel-card-image"
           onclick="window.open(this.url)"
@@ -157,7 +162,7 @@
     <div class="latest-news-container">
       <div class="latest-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="latest-news-image"
           onclick="window.open(this.url)"
@@ -166,7 +171,7 @@
       </div>
       <div class="latest-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="latest-news-image"
           onclick="window.open(this.url)"
@@ -175,7 +180,7 @@
       </div>
       <div class="latest-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="latest-news-image"
           onclick="window.open(this.url)"
@@ -184,7 +189,7 @@
       </div>
       <div class="latest-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt="News"
           class="latest-news-image"
           onclick="window.open(this.url)"
@@ -205,7 +210,7 @@
       <div id="left-container" class="business-news-container">
         <div class="business-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt="Illustration"
             class="business-card-image"
             onclick="window.open(this.url)"
@@ -214,7 +219,7 @@
         </div>
         <div class="business-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt="Illustration"
             onclick="window.open(this.url)"
             class="business-card-image"
@@ -224,13 +229,13 @@
       </div>
       <div class="business-illustration-container">
         <img
-          src="download-removebg-preview.png"
+          src="images/download-removebg-preview.png"
           alt="Illustration"
           class="business-illustration"
         />
         <div class="business-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt="Illustration"
             class="business-card-image"
             onclick="window.open(this.url)"
@@ -241,7 +246,7 @@
       <div id="right-container" class="business-news-container">
         <div class="business-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt="Illustration"
             class="business-card-image"
             onclick="window.open(this.url)"
@@ -250,7 +255,7 @@
         </div>
         <div class="business-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt="Illustration"
             class="business-card-image"
             onclick="window.open(this.url)"
@@ -266,7 +271,7 @@
       <div class="health-left-container">
         <div class="health-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="health-card-image"
             onclick="window.open(this.url)"
@@ -275,7 +280,7 @@
         </div>
         <div class="health-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="health-card-image"
             onclick="window.open(this.url)"
@@ -285,7 +290,7 @@
       </div>
       <div class="health-right-container">
         <img
-          src="health-news-removebg-preview.png"
+          src="images/health-news-removebg-preview.png"
           alt=""
           class="health-illustration"
         />
@@ -298,7 +303,7 @@
     <div class="general-news-container">
       <div class="general-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="general-card-image"
           onclick="window.open(this.url)"
@@ -307,7 +312,7 @@
       </div>
       <div class="general-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="general-card-image"
           onclick="window.open(this.url)"
@@ -316,7 +321,7 @@
       </div>
       <div class="general-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="general-card-image"
           onclick="window.open(this.url)"
@@ -330,7 +335,7 @@
       <div class="sports-left-container">
         <div class="sports-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="sports-card-image"
             onclick="window.open(this.url)"
@@ -339,7 +344,7 @@
         </div>
         <div class="sports-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="sports-card-image"
             onclick="window.open(this.url)"
@@ -348,7 +353,7 @@
         </div>
       </div>
       <div class="sports-right-container">
-        <img src="Sports-news.jpg" alt="" class="sports-illustration" />
+        <img src="images/Sports-news.jpg" alt="" class="sports-illustration" />
       </div>
     </div>
 
@@ -357,7 +362,7 @@
     <div class="science-news-container">
       <div class="science-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="science-card-image"
           onclick="window.open(this.url)"
@@ -366,7 +371,7 @@
       </div>
       <div class="science-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="science-card-image"
           onclick="window.open(this.url)"
@@ -375,7 +380,7 @@
       </div>
       <div class="science-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="science-card-image"
           onclick="window.open(this.url)"
@@ -389,7 +394,7 @@
     <div class="entertainment-news-container">
       <div class="entertainment-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="entertainment-card-image"
           onclick="window.open(this.url)"
@@ -398,7 +403,7 @@
       </div>
       <div class="entertainment-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="entertainment-card-image"
           onclick="window.open(this.url)"
@@ -407,7 +412,7 @@
       </div>
       <div class="entertainment-news-card">
         <img
-          src="download.jpg"
+          src="images/download.jpg"
           alt=""
           class="entertainment-card-image"
           onclick="window.open(this.url)"
@@ -422,7 +427,7 @@
       <div class="tech-left-container">
         <div class="tech-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="tech-card-image"
             onclick="window.open(this.url)"
@@ -431,7 +436,7 @@
         </div>
         <div class="tech-card">
           <img
-            src="download.jpg"
+            src="images/download.jpg"
             alt=""
             class="tech-card-image"
             onclick="window.open(this.url)"
@@ -440,7 +445,11 @@
         </div>
       </div>
       <div class="tech-right-container">
-        <img src="technology-news.jpg" alt="" class="tech-illustration" />
+        <img
+          src="images/technology-news.jpg"
+          alt=""
+          class="tech-illustration"
+        />
       </div>
     </div>
 
@@ -465,10 +474,9 @@
 
       <a href=""
         ><div class="back-to-top">
-          <img src="up-arrow-5.png" alt="" class="up-arrow" /></div
+          <img src="images/up-arrow-5.png" alt="" class="up-arrow" /></div
       ></a>
     </div>
-    <!-- <script src="script.js"></script> -->
 
     <script src="app.js"></script>
   </body>
