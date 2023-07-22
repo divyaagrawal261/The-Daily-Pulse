@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
 }
-
+#main-website{
+  z-index: -20000;
+  position: relative;
+  display: none;
+}
 body {
   background-image: url(images/news-1172463_1280.jpg);
   background-attachment: fixed;

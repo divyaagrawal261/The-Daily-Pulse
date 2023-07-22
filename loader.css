@@ -1,0 +1,57 @@
+.loader-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.952);
+    height: 100vh;
+    z-index: 999999999999;
+}
+.loading-animation-container{
+    display: flex;
+    flex-direction: row;
+}
+.letter{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    height: fit-content;
+    font-size: 50px;
+    padding: 5px;
+    background-color: rgb(39, 37, 37);
+    color: rgb(231, 226, 194);
+}
+#l1{
+    animation: bounce 1000ms  linear infinite;
+}
+#l2{
+    animation: bounce 1000ms  71ms linear infinite;
+}
+#l3{
+    animation: bounce 1000ms  143ms linear infinite;
+}
+#l4{
+    animation: bounce 1000ms  214ms linear infinite ;
+}
+#l5{
+    animation: bounce 1000ms  286ms linear infinite ;
+}
+#l6{
+    animation: bounce 1000ms  357ms linear infinite ;
+}
+#l7{
+    animation: bounce 1000ms  428ms linear infinite ;
+}
+
+@keyframes bounce {
+    0%
+    {
+    }
+    50%{
+        margin-top: -10px;
+        border-bottom: 15px solid rgb(226, 223, 208)
+    }
+    100%{
+        border-bottom: 0px solid rgb(219, 216, 198);
+
+    }
+}

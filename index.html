@@ -6,477 +6,502 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Daily Pulse</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="The Daily Pulse.ico">
+    <link rel="icon" type="image/x-icon" href="The Daily Pulse.ico" />
+    <link rel="stylesheet" href="loader.css" />
   </head>
-  <body>
-    <!-- Header region -->
-    <div class="header-container">
-      <img src="images/The Daily Pulse.png" alt="Logo" class="Logo-img" />
-    </div>
-
-    <!-- The Navigation Bar -->
-    <section class="nav">
-      <div class="logo">The Daily Pulse</div>
-
-      <!--  checkbox to control the icon's state    -->
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
-      </label>
-      <!--  main menu    -->
-      <ul class="menu">
-        <li>Home</li>
-        <li onclick="window.open(`/topics.html`,`_parent`)">Topics</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </section>
-
-    <!-- Search and select -->
-    <div class="search-and-select-container">
-      <div>
-        <input
-          type="text"
-          class="searchByKeyword"
-          placeholder="Search using Keyword"
-        /><button
-          class="goByKeyword"
-          onclick="window.open(`/keyword.html`,`_parent`)"
-        >
-          Search
-        </button>
-      </div>
-
-      <div class="countryNames">
-        <select
-          class="countryDrop"
-          id="country"
-          onchange="refreshAPI(this.value)"
-        >
-          <option value="ar">Argentina</option>
-          <option value="au">Australia</option>
-          <option value="at">Austria</option>
-          <option value="be">Belgium</option>
-          <option value="br">Brazil</option>
-          <option value="bg">Bulgaria</option>
-          <option value="ca">Canada</option>
-          <option value="cn">China</option>
-          <option value="co">Colombia</option>
-          <option value="cu">Cuba</option>
-          <option value="cz">Czech Republic</option>
-          <option value="eg">Egypt</option>
-          <option value="fr">France</option>
-          <option value="de">Germany</option>
-          <option value="gb">Great Britain</option>
-          <option value="gr">Greece</option>
-          <option value="hk">Hong Kong</option>
-          <option value="hu">Hungary</option>
-          <option value="in">India</option>
-          <option value="id">Indonesia</option>
-          <option value="ie">Ireland</option>
-          <option value="il">Israel</option>
-          <option value="it">Italy</option>
-          <option value="jp">Japan</option>
-          <option value="kr">Korea</option>
-          <option value="lv">Latvia</option>
-          <option value="lt">Lithuania</option>
-          <option value="my">Malaysia</option>
-          <option value="mx">Mexico</option>
-          <option value="ma">Morocco</option>
-          <option value="nl">Netherlands</option>
-          <option value="nz">New Zealand</option>
-          <option value="ng">Nigeria</option>
-          <option value="no">Norway</option>
-          <option value="ph">Philippines</option>
-          <option value="pl">Poland</option>
-          <option value="pt">Portugal</option>
-          <option value="ro">Romania</option>
-          <option value="ru">Russia</option>
-          <option value="sa">Saudi Arabia</option>
-          <option value="sk">Slovakia</option>
-          <option value="si">Slovenia</option>
-          <option value="za">South Africa</option>
-          <option value="se">Sweden</option>
-          <option value="ch">Switzerland</option>
-          <option value="tw">Taiwan</option>
-          <option value="th">Thailand</option>
-          <option value="tr">Turkey</option>
-          <option value="ua">Ukraine</option>
-          <option value="ae">United Arab Emirates</option>
-          <option value="us">United States of America</option>
-          <option value="ve">Venezuela</option>
-        </select>
+  <body onload="hide()">
+    <!-- Loader Section -->
+    <div class="loader-container">
+      <div class="loading-animation-container">
+        <div class="letter" id="l1">L</div>
+        <div class="letter" id="l2">o</div>
+        <div class="letter" id="l3">a</div>
+        <div class="letter" id="l4">d</div>
+        <div class="letter" id="l5">i</div>
+        <div class="letter" id="l6">n</div>
+        <div class="letter" id="l7">g</div>
       </div>
     </div>
+    <div id="main-website">
+      <!-- Header region -->
+      <div class="header-container">
+        <img src="images/The Daily Pulse.png" alt="Logo" class="Logo-img" id="TOP"/>
+      </div>
 
-    <!-- Carousel Section -->
-    <div class="carousel-container">
-      <div class="carousel-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="carousel-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="news-headlines">News 1</h3>
-      </div>
-      <div class="carousel-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="carousel-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="news-headlines">News 2</h3>
-      </div>
-      <div class="carousel-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="carousel-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="news-headlines">News 3</h3>
-      </div>
-      <div class="carousel-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="carousel-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="news-headlines">News 4</h3>
-      </div>
-      <div class="carousel-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="carousel-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="news-headlines">News 5</h3>
-      </div>
-    </div>
+      <!-- The Navigation Bar -->
+      <section class="nav">
+        <div class="logo">The Daily Pulse</div>
 
-    <!-- Latest News Section -->
-    <h2 class="latest-news-heading">Latest News</h2>
-    <div class="latest-news-container">
-      <div class="latest-news-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="latest-news-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="latest-news-headlines">News</h3>
-      </div>
-      <div class="latest-news-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="latest-news-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="latest-news-headlines">News</h3>
-      </div>
-      <div class="latest-news-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="latest-news-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="latest-news-headlines">News</h3>
-      </div>
-      <div class="latest-news-card">
-        <img
-          src="images/download.jpg"
-          alt="News"
-          class="latest-news-image"
-          onclick="window.open(this.url)"
-        />
-        <h3 class="latest-news-headlines">News</h3>
-      </div>
-    </div>
+        <!--  checkbox to control the icon's state    -->
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <!--  main menu    -->
+        <ul class="menu">
+          <li>Home</li>
+          <li onclick="window.open(`/topics.html`,`_parent`)">Topics</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </section>
 
-    <!-- Thought section -->
-    <div class="thought-container">
-      <h2 class="heading-thought">For You</h2>
-      <div class="thought-content"></div>
-    </div>
+      <!-- Search and select -->
+      <div class="search-and-select-container">
+        <div>
+          <input
+            type="text"
+            class="searchByKeyword"
+            placeholder="Search using Keyword"
+          /><button
+            class="goByKeyword"
+            onclick="window.open(`/keyword.html`,`_parent`)"
+          >
+            Search
+          </button>
+        </div>
 
-    <!-- Business Section -->
-    <h2 class="business-heading">Business</h2>
-    <div class="business-main-container">
-      <div id="left-container" class="business-news-container">
-        <div class="business-card">
+        <div class="countryNames">
+          <select
+            class="countryDrop"
+            id="country"
+            onchange="refreshAPI(this.value)"
+          >
+            <option value="ar">Argentina</option>
+            <option value="au">Australia</option>
+            <option value="at">Austria</option>
+            <option value="be">Belgium</option>
+            <option value="br">Brazil</option>
+            <option value="bg">Bulgaria</option>
+            <option value="ca">Canada</option>
+            <option value="cn">China</option>
+            <option value="co">Colombia</option>
+            <option value="cu">Cuba</option>
+            <option value="cz">Czech Republic</option>
+            <option value="eg">Egypt</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="gb">Great Britain</option>
+            <option value="gr">Greece</option>
+            <option value="hk">Hong Kong</option>
+            <option value="hu">Hungary</option>
+            <option value="in">India</option>
+            <option value="id">Indonesia</option>
+            <option value="ie">Ireland</option>
+            <option value="il">Israel</option>
+            <option value="it">Italy</option>
+            <option value="jp">Japan</option>
+            <option value="kr">Korea</option>
+            <option value="lv">Latvia</option>
+            <option value="lt">Lithuania</option>
+            <option value="my">Malaysia</option>
+            <option value="mx">Mexico</option>
+            <option value="ma">Morocco</option>
+            <option value="nl">Netherlands</option>
+            <option value="nz">New Zealand</option>
+            <option value="ng">Nigeria</option>
+            <option value="no">Norway</option>
+            <option value="ph">Philippines</option>
+            <option value="pl">Poland</option>
+            <option value="pt">Portugal</option>
+            <option value="ro">Romania</option>
+            <option value="ru">Russia</option>
+            <option value="sa">Saudi Arabia</option>
+            <option value="sk">Slovakia</option>
+            <option value="si">Slovenia</option>
+            <option value="za">South Africa</option>
+            <option value="se">Sweden</option>
+            <option value="ch">Switzerland</option>
+            <option value="tw">Taiwan</option>
+            <option value="th">Thailand</option>
+            <option value="tr">Turkey</option>
+            <option value="ua">Ukraine</option>
+            <option value="ae">United Arab Emirates</option>
+            <option value="us">United States of America</option>
+            <option value="ve">Venezuela</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="carousel-container">
+        <div class="carousel-card">
           <img
             src="images/download.jpg"
+            alt="News"
+            class="carousel-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="news-headlines">News 1</h3>
+        </div>
+        <div class="carousel-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="carousel-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="news-headlines">News 2</h3>
+        </div>
+        <div class="carousel-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="carousel-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="news-headlines">News 3</h3>
+        </div>
+        <div class="carousel-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="carousel-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="news-headlines">News 4</h3>
+        </div>
+        <div class="carousel-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="carousel-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="news-headlines">News 5</h3>
+        </div>
+      </div>
+
+      <!-- Latest News Section -->
+      <h2 class="latest-news-heading">Latest News</h2>
+      <div class="latest-news-container">
+        <div class="latest-news-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="latest-news-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="latest-news-headlines">News</h3>
+        </div>
+        <div class="latest-news-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="latest-news-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="latest-news-headlines">News</h3>
+        </div>
+        <div class="latest-news-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="latest-news-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="latest-news-headlines">News</h3>
+        </div>
+        <div class="latest-news-card">
+          <img
+            src="images/download.jpg"
+            alt="News"
+            class="latest-news-image"
+            onclick="window.open(this.url)"
+          />
+          <h3 class="latest-news-headlines">News</h3>
+        </div>
+      </div>
+
+      <!-- Thought section -->
+      <div class="thought-container">
+        <h2 class="heading-thought">For You</h2>
+        <div class="thought-content"></div>
+      </div>
+
+      <!-- Business Section -->
+      <h2 class="business-heading">Business</h2>
+      <div class="business-main-container">
+        <div id="left-container" class="business-news-container">
+          <div class="business-card">
+            <img
+              src="images/download.jpg"
+              alt="Illustration"
+              class="business-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="business-news-headline">Business-news</h4>
+          </div>
+          <div class="business-card">
+            <img
+              src="images/download.jpg"
+              alt="Illustration"
+              onclick="window.open(this.url)"
+              class="business-card-image"
+            />
+            <h4 class="business-news-headline">Business-news</h4>
+          </div>
+        </div>
+        <div class="business-illustration-container">
+          <img
+            src="images/download-removebg-preview.png"
             alt="Illustration"
-            class="business-card-image"
-            onclick="window.open(this.url)"
+            class="business-illustration"
           />
-          <h4 class="business-news-headline">Business-news</h4>
+          <div class="business-card">
+            <img
+              src="images/download.jpg"
+              alt="Illustration"
+              class="business-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="business-news-headline">Business-news</h4>
+          </div>
         </div>
-        <div class="business-card">
-          <img
-            src="images/download.jpg"
-            alt="Illustration"
-            onclick="window.open(this.url)"
-            class="business-card-image"
-          />
-          <h4 class="business-news-headline">Business-news</h4>
-        </div>
-      </div>
-      <div class="business-illustration-container">
-        <img
-          src="images/download-removebg-preview.png"
-          alt="Illustration"
-          class="business-illustration"
-        />
-        <div class="business-card">
-          <img
-            src="images/download.jpg"
-            alt="Illustration"
-            class="business-card-image"
-            onclick="window.open(this.url)"
-          />
-          <h4 class="business-news-headline">Business-news</h4>
-        </div>
-      </div>
-      <div id="right-container" class="business-news-container">
-        <div class="business-card">
-          <img
-            src="images/download.jpg"
-            alt="Illustration"
-            class="business-card-image"
-            onclick="window.open(this.url)"
-          />
-          <h4 class="business-news-headline">Business-news</h4>
-        </div>
-        <div class="business-card">
-          <img
-            src="images/download.jpg"
-            alt="Illustration"
-            class="business-card-image"
-            onclick="window.open(this.url)"
-          />
-          <h4 class="business-news-headline">Business-news</h4>
+        <div id="right-container" class="business-news-container">
+          <div class="business-card">
+            <img
+              src="images/download.jpg"
+              alt="Illustration"
+              class="business-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="business-news-headline">Business-news</h4>
+          </div>
+          <div class="business-card">
+            <img
+              src="images/download.jpg"
+              alt="Illustration"
+              class="business-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="business-news-headline">Business-news</h4>
+          </div>
         </div>
       </div>
-    </div>
 
-    <hr width="60%" />
-    <!-- Health Section -->
-    <div class="health-main-container">
-      <div class="health-left-container">
-        <div class="health-card">
+      <hr width="60%" />
+      <!-- Health Section -->
+      <div class="health-main-container">
+        <div class="health-left-container">
+          <div class="health-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="health-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="health-news-headlines">Health News</h4>
+          </div>
+          <div class="health-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="health-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="health-news-headlines">Health News</h4>
+          </div>
+        </div>
+        <div class="health-right-container">
+          <img
+            src="images/health-news-removebg-preview.png"
+            alt=""
+            class="health-illustration"
+          />
+        </div>
+      </div>
+
+      <!-- General News Section -->
+      <div class="general-news-container">
+        <div class="general-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="health-card-image"
+            class="general-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="health-news-headlines">Health News</h4>
+          <h4 class="general-news-headline">General News</h4>
         </div>
-        <div class="health-card">
+        <div class="general-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="health-card-image"
+            class="general-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="health-news-headlines">Health News</h4>
+          <h4 class="general-news-headline">General News</h4>
         </div>
-      </div>
-      <div class="health-right-container">
-        <img
-          src="images/health-news-removebg-preview.png"
-          alt=""
-          class="health-illustration"
-        />
-      </div>
-    </div>
-
-    <!-- General News Section -->
-    <div class="general-news-container">
-      <div class="general-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="general-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="general-news-headline">General News</h4>
-      </div>
-      <div class="general-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="general-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="general-news-headline">General News</h4>
-      </div>
-      <div class="general-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="general-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="general-news-headline">General News</h4>
-      </div>
-    </div>
-
-    <!-- Sports Section -->
-    <div class="sports-main-container">
-      <div class="sports-left-container">
-        <div class="sports-card">
+        <div class="general-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="sports-card-image"
+            class="general-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="sports-news-headline">Sports News</h4>
+          <h4 class="general-news-headline">General News</h4>
         </div>
-        <div class="sports-card">
+      </div>
+
+      <!-- Sports Section -->
+      <div class="sports-main-container">
+        <div class="sports-left-container">
+          <div class="sports-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="sports-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="sports-news-headline">Sports News</h4>
+          </div>
+          <div class="sports-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="sports-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="sports-news-headline">Sports News</h4>
+          </div>
+        </div>
+        <div class="sports-right-container">
+          <img
+            src="images/Sports-news.jpg"
+            alt=""
+            class="sports-illustration"
+          />
+        </div>
+      </div>
+
+      <!--Science Section-->
+      <h2 class="science-news-heading">Science</h2>
+      <div class="science-news-container">
+        <div class="science-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="sports-card-image"
+            class="science-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="sports-news-headline">Sports News</h4>
+          <h4 class="science-news-headline">Science News</h4>
         </div>
-      </div>
-      <div class="sports-right-container">
-        <img src="images/Sports-news.jpg" alt="" class="sports-illustration" />
-      </div>
-    </div>
-
-    <!--Science Section-->
-    <h2 class="science-news-heading">Science</h2>
-    <div class="science-news-container">
-      <div class="science-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="science-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="science-news-headline">Science News</h4>
-      </div>
-      <div class="science-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="science-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="science-news-headline">Science News</h4>
-      </div>
-      <div class="science-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="science-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="science-news-headline">Science News</h4>
-      </div>
-    </div>
-
-    <!--Entertainment Section-->
-    <h2 class="entertainment-news-heading">Entertainment</h2>
-    <div class="entertainment-news-container">
-      <div class="entertainment-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="entertainment-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="entertainment-news-headline">entertainment News</h4>
-      </div>
-      <div class="entertainment-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="entertainment-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="entertainment-news-headline">entertainment News</h4>
-      </div>
-      <div class="entertainment-news-card">
-        <img
-          src="images/download.jpg"
-          alt=""
-          class="entertainment-card-image"
-          onclick="window.open(this.url)"
-        />
-        <h4 class="entertainment-news-headline">entertainment News</h4>
-      </div>
-    </div>
-
-    <!-- Technology Section -->
-    <h2 class="tech-heading">Technology</h2>
-    <div class="tech-main-container">
-      <div class="tech-left-container">
-        <div class="tech-card">
+        <div class="science-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="tech-card-image"
+            class="science-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="technology-news-headline">tech News</h4>
+          <h4 class="science-news-headline">Science News</h4>
         </div>
-        <div class="tech-card">
+        <div class="science-news-card">
           <img
             src="images/download.jpg"
             alt=""
-            class="tech-card-image"
+            class="science-card-image"
             onclick="window.open(this.url)"
           />
-          <h4 class="technology-news-headline">tech News</h4>
+          <h4 class="science-news-headline">Science News</h4>
         </div>
       </div>
-      <div class="tech-right-container">
-        <img
-          src="images/technology-news.jpg"
-          alt=""
-          class="tech-illustration"
-        />
+
+      <!--Entertainment Section-->
+      <h2 class="entertainment-news-heading">Entertainment</h2>
+      <div class="entertainment-news-container">
+        <div class="entertainment-news-card">
+          <img
+            src="images/download.jpg"
+            alt=""
+            class="entertainment-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h4 class="entertainment-news-headline">entertainment News</h4>
+        </div>
+        <div class="entertainment-news-card">
+          <img
+            src="images/download.jpg"
+            alt=""
+            class="entertainment-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h4 class="entertainment-news-headline">entertainment News</h4>
+        </div>
+        <div class="entertainment-news-card">
+          <img
+            src="images/download.jpg"
+            alt=""
+            class="entertainment-card-image"
+            onclick="window.open(this.url)"
+          />
+          <h4 class="entertainment-news-headline">entertainment News</h4>
+        </div>
+      </div>
+
+      <!-- Technology Section -->
+      <h2 class="tech-heading">Technology</h2>
+      <div class="tech-main-container">
+        <div class="tech-left-container">
+          <div class="tech-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="tech-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="technology-news-headline">tech News</h4>
+          </div>
+          <div class="tech-card">
+            <img
+              src="images/download.jpg"
+              alt=""
+              class="tech-card-image"
+              onclick="window.open(this.url)"
+            />
+            <h4 class="technology-news-headline">tech News</h4>
+          </div>
+        </div>
+        <div class="tech-right-container">
+          <img
+            src="images/technology-news.jpg"
+            alt=""
+            class="tech-illustration"
+          />
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="newsletter-container">
+        <h3 class="newsletter-heading">Stay in Touch</h3>
+        <form action="" class="form-container">
+          <input type="email" placeholder="Enter your email" />
+          <button>Submit</button>
+        </form>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer-container">
+        <div class="brand-name">The Daily Pulse</div>
+        <div class="copyright">
+          Copyright ©
+          <a href="https://www.linkedin.com/in/divya-agrawal-3b710825a/"
+            >Divya Agrawal</a
+          >
+        </div>
+
+        <a href="#TOP"
+          ><div class="back-to-top">
+            <img src="images/up-arrow-5.png" alt="" class="up-arrow" /></div
+        ></a>
       </div>
     </div>
-
-    <!-- Newsletter Section -->
-    <div class="newsletter-container">
-      <h3 class="newsletter-heading">Stay in Touch</h3>
-      <form action="" class="form-container">
-        <input type="email" placeholder="Enter your email" />
-        <button>Submit</button>
-      </form>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer-container">
-      <div class="brand-name">The Daily Pulse</div>
-      <div class="copyright">
-        Copyright ©
-        <a href="https://www.linkedin.com/in/divya-agrawal-3b710825a/"
-          >Divya Agrawal</a
-        >
-      </div>
-
-      <a href=""
-        ><div class="back-to-top">
-          <img src="images/up-arrow-5.png" alt="" class="up-arrow" /></div
-      ></a>
-    </div>
-
+    <script>
+      function hide()
+      {
+        document.querySelector(".loader-container").style.display="none"
+        document.getElementById("main-website").style.display="block"
+      }
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
