@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search By Topic-The Daily Pulse</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="topicStyle.css">
+    <link rel="stylesheet" href="topicStyle.css" />
+    <link rel="stylesheet" href="keywordStyle.css" />
+    <link rel="icon" type="image/x-icon" href="The Daily Pulse.ico" />
   </head>
   <body>
     <!-- Header region -->
     <div class="header-container">
       <img src="images/The Daily Pulse.png" alt="Logo" class="Logo-img" />
     </div>
-    
+
     <!-- The Navigation Bar -->
     <section class="nav">
       <div class="logo">The Daily Pulse</div>
@@ -30,106 +32,96 @@
         <li>Contact</li>
       </ul>
     </section>
-    
+
     <!-- Search and select -->
-    <div class="search-and-select-container" >
-      <!-- <div>
-        <input
-        type="text"
-        class="searchByKeyword"
-        placeholder="Search using Keyword"
-        /><button class="goByKeyword" onclick="search()">Search</button>
-      </div> -->
-      
-    <div class="countryNames">
-        <select
-        class="countryDrop"
-        id="country"
-        onchange="search()"
-        >
-        <option value="ar">Argentina</option>
-        <option value="au">Australia</option>
-        <option value="at">Austria</option>
-        <option value="be">Belgium</option>
-        <option value="br">Brazil</option>
-        <option value="bg">Bulgaria</option>
-        <option value="ca">Canada</option>
-        <option value="cn">China</option>
-        <option value="co">Colombia</option>
-        <option value="cu">Cuba</option>
-        <option value="cz">Czech Republic</option>
-        <option value="eg">Egypt</option>
-        <option value="fr">France</option>
-        <option value="de">Germany</option>
-        <option value="gb">Great Britain</option>
-        <option value="gr">Greece</option>
-        <option value="hk">Hong Kong</option>
-        <option value="hu">Hungary</option>
-        <option value="in">India</option>
-        <option value="id">Indonesia</option>
-        <option value="ie">Ireland</option>
-        <option value="il">Israel</option>
-        <option value="it">Italy</option>
-        <option value="jp">Japan</option>
-        <option value="kr">Korea</option>
-        <option value="lv">Latvia</option>
-        <option value="lt">Lithuania</option>
-        <option value="my">Malaysia</option>
-        <option value="mx">Mexico</option>
-        <option value="ma">Morocco</option>
-        <option value="nl">Netherlands</option>
-        <option value="nz">New Zealand</option>
-        <option value="ng">Nigeria</option>
-        <option value="no">Norway</option>
-        <option value="ph">Philippines</option>
-        <option value="pl">Poland</option>
-        <option value="pt">Portugal</option>
-        <option value="ro">Romania</option>
-        <option value="ru">Russia</option>
-        <option value="sa">Saudi Arabia</option>
-        <option value="sk">Slovakia</option>
-        <option value="si">Slovenia</option>
-        <option value="za">South Africa</option>
-        <option value="se">Sweden</option>
-        <option value="ch">Switzerland</option>
-        <option value="tw">Taiwan</option>
-        <option value="th">Thailand</option>
-        <option value="tr">Turkey</option>
-        <option value="ua">Ukraine</option>
-        <option value="ae">United Arab Emirates</option>
-        <option value="us">United States of America</option>
-        <option value="ve">Venezuela</option>
-      </select>
+    <div class="search-and-select-container">
+      <div class="countryNames">
+        <select class="countryDrop" id="country" onchange="search()">
+          <option value="ar">Argentina</option>
+          <option value="au">Australia</option>
+          <option value="at">Austria</option>
+          <option value="be">Belgium</option>
+          <option value="br">Brazil</option>
+          <option value="bg">Bulgaria</option>
+          <option value="ca">Canada</option>
+          <option value="cn">China</option>
+          <option value="co">Colombia</option>
+          <option value="cu">Cuba</option>
+          <option value="cz">Czech Republic</option>
+          <option value="eg">Egypt</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="gb">Great Britain</option>
+          <option value="gr">Greece</option>
+          <option value="hk">Hong Kong</option>
+          <option value="hu">Hungary</option>
+          <option value="in">India</option>
+          <option value="id">Indonesia</option>
+          <option value="ie">Ireland</option>
+          <option value="il">Israel</option>
+          <option value="it">Italy</option>
+          <option value="jp">Japan</option>
+          <option value="kr">Korea</option>
+          <option value="lv">Latvia</option>
+          <option value="lt">Lithuania</option>
+          <option value="my">Malaysia</option>
+          <option value="mx">Mexico</option>
+          <option value="ma">Morocco</option>
+          <option value="nl">Netherlands</option>
+          <option value="nz">New Zealand</option>
+          <option value="ng">Nigeria</option>
+          <option value="no">Norway</option>
+          <option value="ph">Philippines</option>
+          <option value="pl">Poland</option>
+          <option value="pt">Portugal</option>
+          <option value="ro">Romania</option>
+          <option value="ru">Russia</option>
+          <option value="sa">Saudi Arabia</option>
+          <option value="sk">Slovakia</option>
+          <option value="si">Slovenia</option>
+          <option value="za">South Africa</option>
+          <option value="se">Sweden</option>
+          <option value="ch">Switzerland</option>
+          <option value="tw">Taiwan</option>
+          <option value="th">Thailand</option>
+          <option value="tr">Turkey</option>
+          <option value="ua">Ukraine</option>
+          <option value="ae">United Arab Emirates</option>
+          <option value="us">United States of America</option>
+          <option value="ve">Venezuela</option>
+        </select>
+      </div>
     </div>
-  </div>
-  
-  
-  <div class="topics-container">
-    <div class="topic" onclick="search(`general`)">General</div>
-    <div class="topic"  onclick="search(`sports`)">Sports</div>
-    <div class="topic"  onclick="search(`science`)">Science</div>
-        <div class="topic"  onclick="search(`technology`)">Technology</div>
-        <div class="topic"  onclick="search(`entertainment`)">Entertainment</div>
-        <div class="topic"  onclick="search(`health`)">Health</div>
-        <div class="topic"  onclick="search(`business`)">Business</div>
+
+    <!-- Select Topics -->
+    <div class="topics-container">
+      <div class="topic" onclick="search(`general`)"><span>General</span></div>
+      <div class="topic" onclick="search(`sports`)"><span>Sports</span></div>
+      <div class="topic" onclick="search(`science`)"><span>Science</span></div>
+      <div class="topic" onclick="search(`technology`)"><span>Technology</span></div>
+      <div class="topic" onclick="search(`entertainment`)"><span>Entertainment</span></div>
+      <div class="topic" onclick="search(`health`)"><span>Health</span></div>
+      <div class="topic" onclick="search(`business`)"><span>Business</span></div>
     </div>
+
+    <!-- News Region -->
+    <div class="news-container"></div>
     <!-- Footer Section -->
     <div class="footer-container">
       <div class="brand-name">The Daily Pulse</div>
       <div class="copyright">
         Copyright ©
         <a href="https://www.linkedin.com/in/divya-agrawal-3b710825a/"
-        >Divya Agrawal</a
+          >Divya Agrawal</a
         >
       </div>
-      
-      <a href=""
-      ><div class="back-to-top">
-        <img src="images/up-arrow-5.png" alt="" class="up-arrow" /></div
-        ></a>
-      </div>
 
-      <script src="topic.js"></script> 
+      <a href=""
+        ><div class="back-to-top">
+          <img src="images/up-arrow-5.png" alt="" class="up-arrow" /></div
+      ></a>
+    </div>
+
+    <script src="topic.js"></script>
   </body>
-  </html>
-  
+</html>

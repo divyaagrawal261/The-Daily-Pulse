@@ -14,13 +14,18 @@ function search()
         alert("Please Enter a valid Keyword")
         return
     }
-    newsContainer.innerHTML=""
-    let url = "https://newsapi.org/v2/everything?q="+keyword+"&from="+year+"-"+(month-1)+"-"+day+"&sortBy=publishedAt&apiKey=ed8668a21719482a8d700d96b7a99f61";
-    
-    fetch(url).then((response)=>response.json()).then((data)=>
-    {
-        console.log(data)
-        let articles=data.articles
+    else{
+        let url = "https://newsapi.org/v2/everything?q="+keyword+"&from="+year+"-"+(month-1)+"-"+day+"&sortBy=publishedAt&apiKey=ed8668a21719482a8d700d96b7a99f61";
+        
+        fetch(url).then((response)=>response.json()).then((data)=>
+        {
+            if(data.totalResults==0)
+            {
+                alert("Please Enter a valid Keyword")
+                return 
+            }
+            newsContainer.innerHTML=""
+            let articles=data.articles
         let j=0;
         while(j!=articles.length)
         {
@@ -38,19 +43,4 @@ function search()
         }
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

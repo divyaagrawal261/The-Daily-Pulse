@@ -188,6 +188,14 @@ h2 {
   font-size: 15px;
   padding: 2px;
   margin-left: 0px;
+  background-color: #000000;
+  transition: 500ms;
+  color: rgb(202, 202, 202);
+  border: 1px solid rgb(202, 202, 202);
+}
+.goByKeyword:hover{
+  background-color: rgb(202, 202, 202);
+  color: black;
 }
 .countryDrop {
   font-size: 15px;
@@ -196,6 +204,13 @@ h2 {
   border: 0px;
   color: whitesmoke;
 }
+button:hover{
+  cursor: pointer;
+}
+select:hover{
+  cursor: pointer;
+}
+
 
 /* Carousel Window */
 .carousel-container {
@@ -768,4 +783,9 @@ h2 {
 .up-arrow {
   height: 15px;
   width: 15px;
+}
+
+/* Styling the scrollbar */
+::-webkit-scrollbar{
+display: none;
 }
