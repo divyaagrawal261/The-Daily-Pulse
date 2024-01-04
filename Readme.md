@@ -12,7 +12,6 @@ The Daily Pulse is a project aimed at providing users with a daily dose of inspi
 - **Images:** Engaging and motivational images to complement the daily content.
 - **User Accounts:** Enable users to create accounts and personalize their daily content.
 - **Customizable Preferences:** Allow users to select their preferred content types or sources.
-- **Mobile App Integration:** Extend the project to mobile platforms for on-the-go access.
 
 ## Installation
 
