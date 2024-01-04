@@ -10,8 +10,9 @@ The Daily Pulse is a project aimed at providing users with a daily dose of inspi
 - **Quote of the Day:** A daily inspirational quote to uplift your spirits.
 - **Articles:** Curated articles on various topics to enlighten and inform users.
 - **Images:** Engaging and motivational images to complement the daily content.
-- **User Accounts:** Enable users to create accounts and personalize their daily content.
-- **Customizable Preferences:** Allow users to select their preferred content types or sources.
+- **Keyword-Based Search:** Find specific content by searching with keywords.
+- **Country-Based News:** Access news tailored to specific countries.
+- **Category-Based News:** Explore articles categorized by different topics.
 
 ## Installation
 
